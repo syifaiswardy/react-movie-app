@@ -16,8 +16,8 @@ const GlobalState = ({ children }) => {
 
 
     useEffect(()=>{
-        const getDataStorage = JSON.parse(localStorage.getItem('movieList'))
-        if (getDataStorage && getDataStorage.length > 0) setMovieList(getDataStorage)
+        // const getDataStorage = JSON.parse(localStorage.getItem('movieList'))
+        // if (getDataStorage && getDataStorage.length > 0) setMovieList(getDataStorage)
     },[]) // to store search keyword in local storage after submit
 
     const handleOnChange = (event) => {
@@ -33,7 +33,7 @@ const GlobalState = ({ children }) => {
 
         if (data){
             setMovieList(data.Search)
-            localStorage.setItem('movieList', JSON.stringify(data.Search))
+            // localStorage.setItem('movieList', JSON.stringify(data.Search))
             setLoading(false)
             setSearchParam('')
         } 

@@ -8,16 +8,32 @@ const Search = () => {
 
 
     return (
-        <div className="search">
-            <input name="search"
-                value={searchParam}
-                onChange={handleOnChange}
-                placeholder="Enter movie keyword" />
-            <button disabled={searchParam.trim().length <=2} //to make the button disabled if have letter less than or equal 2
-                onClick={handleOnSubmit}>
-                Submit
-            </button>
+        <div className=""
+        // style={{background : 'black'}}
+        >
+            <div className="container">
+                <div className="navbar justify-content-between">
+                    <div className="col-md-2 search ">
+                        <h1>MovieWiki</h1>
+                    </div>
+                    <div className="col-md-5 search ">
+                        <input name="search"
+                            value={searchParam}
+                            onChange={handleOnChange}
+                            placeholder="Enter movie keyword"
+                            className="form-control mx-2" />
+
+                        <button disabled={searchParam.trim().length <= 2} //to make the button disabled if have letter less than or equal 2
+                            onClick={handleOnSubmit}
+                            className="btn btn-primary mx-2"
+                            type="button">
+                            Submit
+                        </button>
+                    </div>
+            </div>
         </div>
+        </div >
+
     )
 }
 
