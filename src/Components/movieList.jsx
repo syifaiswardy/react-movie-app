@@ -31,7 +31,7 @@ const MovieList = () => {
         } else {
             return (
                 <div>
-                    <p className="d-flex justify-content-center align-items-center mt-5">Movie not found</p>
+                    <p className="d-flex justify-content-center align-items-center mt-5 text-secondary">Movie not found</p>
                 </div>
             );
         }
