@@ -25,9 +25,9 @@ const Search = () => {
 
                         <button disabled={searchParam.trim().length <= 2} //to make the button disabled if have letter less than or equal 2
                             onClick={handleOnSubmit}
-                            className="btn btn-primary mx-2"
+                            className="btn btn-warning mx-2"
                             type="button">
-                            Submit
+                            Search
                         </button>
                     </div>
             </div>

@@ -6,6 +6,7 @@ export const GlobalContext = createContext({
     handleOnSubmit: () => { },
     movieList: [],
     loading: false, //flag
+    searched: false,
 })
 
 const GlobalState = ({ children }) => {
@@ -13,6 +14,7 @@ const GlobalState = ({ children }) => {
     const [searchParam, setSearchParam] = useState('')
     const [movieList, setMovieList] = useState([])
     const [loading, setLoading] = useState(false)
+    const [searched, setSearched] = useState(false);
 
 
     useEffect(()=>{
@@ -27,6 +29,7 @@ const GlobalState = ({ children }) => {
 
     const handleOnSubmit = async () => {
         setLoading(true)
+        setSearched(true)
 
         const response = await fetch(`https://www.omdbapi.com/?s=${searchParam}&apikey=dc6a5742`)//fetch the api endpoint
         const data = await response.json();
@@ -36,6 +39,7 @@ const GlobalState = ({ children }) => {
             // localStorage.setItem('movieList', JSON.stringify(data.Search))
             setLoading(false)
             setSearchParam('')
+            setSearched(true)
         } 
 
     }
@@ -47,6 +51,7 @@ const GlobalState = ({ children }) => {
         handleOnSubmit,
         movieList,
         loading, //flag
+        searched,
     }
 
     return (
