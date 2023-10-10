@@ -14,7 +14,7 @@ const Search = () => {
             <div className="container">
                 <div className="navbar justify-content-between">
                     <div className="col-md-2 search ">
-                        <h1>MovieWiki</h1>
+                        <h1>MovieSearch</h1>
                     </div>
                     <div className="col-md-5 search ">
                         <input name="search"
