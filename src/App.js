@@ -3,7 +3,6 @@ import './App.css';
 import Search from './Components/search';
 import MovieList from './Components/movieList';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './Components/home';
 
 function App() {
 
